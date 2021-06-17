@@ -10,3 +10,14 @@ int max_num=-32768;
  }
 return max_num;
 }
+
+int min(int arr[], int n){
+
+int min_num=32767;
+
+ for(int i=0;i<n;i++){
+    if (min_num>arr[i])
+        min_num=arr[i];
+ }
+return min_num;
+}
