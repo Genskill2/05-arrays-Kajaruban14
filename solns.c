@@ -21,3 +21,13 @@ int min_num=32767;
  }
 return min_num;
 }
+
+float average(int arr[], int n){
+
+float sum=0;
+
+ for(int i=0;i<n;i++){
+    sum += arr[i];
+ }
+return (sum/n);
+}
