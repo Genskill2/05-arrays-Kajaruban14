@@ -65,3 +65,19 @@ for(int i=0;i<t;i++){
 }
 return mode;
 }
+
+int factors(int n, int ret[]){
+    int x,y=2;
+    int i=0;
+    while(n>1) {
+        x = n%y;
+        if(x==0){
+            ret[i] = y;
+            i++;
+            n = n/y;            
+        }
+        else
+            y++;   
+    }
+return i;
+}
