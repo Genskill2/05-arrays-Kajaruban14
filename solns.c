@@ -31,3 +31,37 @@ float sum=0;
  }
 return (sum/n);
 }
+
+int mode(int a[], int n){
+
+int t, maxnum=-32768;
+
+for(int i=0;i<n;i++){
+    if(a[i]>maxnum)
+        maxnum = a[i];
+}
+
+t = maxnum + 1;
+int count[t];
+
+for(int i=0;i<t;i++){
+    int x=0;
+    for(int j=0; j<n; j++){
+        if(a[j]==i){
+            x++;
+        } 
+    }
+    count[i] = x;
+
+}
+
+maxnum = -32768;
+int mode;
+for(int i=0;i<t;i++){
+    if(count[i]>maxnum){
+        maxnum = count[i];
+        mode = i;
+    }
+}
+return mode;
+}
